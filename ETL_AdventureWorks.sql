@@ -1,10 +1,5 @@
 
 
--- 1. Consulta SQL 
--- 2. Crear una vista (View)
--- 3. En la base de datos de destino, se crean TABLA que almacenará los datos
--- 4. Se ejectura la vista en origen para migrar los datos a la base de datos de destino 
--- 1 Tabla de Hechos y Varias de Dimensiones
 
 
 -- TABLA DE HECHOS / FACT TABLE
