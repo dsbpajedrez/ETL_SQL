@@ -357,3 +357,31 @@ CREATE TABLE [AWDataWarehouse].dbo.DimClientesT (
 
 INSERT INTO [AWDataWarehouse].dbo.DimClientesT
 SELECT * FROM VWDimClientesT
+
+--DIM Currency
+
+CREATE VIEW VWCurrencyRate
+AS
+SELECT 
+	CR.CurrencyRateID,
+	CAST(CR.CurrencyRateDate AS DATE) AS CurrencyRateDate,
+	C.Name AS FromDollarToCurrencyCode,
+	ROUND(CR.AverageRate, 2) AS AverageRate,
+	ROUND(CR.EndOfDayRate,2) AS EndOfDayRate,
+	CAST(CR.ModifiedDate AS DATE) AS ModifiedDate
+FROM Sales.CurrencyRate AS CR
+INNER JOIN Sales.Currency AS C
+on CR.ToCurrencyCode = C.CurrencyCode
+
+CREATE TABLE [AWDataWareHouse].dbo.DimCurrencyRate (
+	CurrencyRateID INT,
+	CurrencyRateDate DATE,
+	FromDollarToCurrencyCode VARCHAR(50),
+	AverageRate NUMERIC(6,2),
+	EndOfDayRate NUMERIC(6,2),
+	ModifiedDate DATE
+)
+
+INSERT INTO [AWDataWarehouse].dbo.DimCurrencyRate
+SELECT * FROM VWCurrencyRate
+
