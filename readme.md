@@ -5,4 +5,13 @@ internacional.
 
 Para esto es importante tener instalado SQL Sever y la base de datos antes mencionada.
 </p>
+<h2>Pasos a seguir:</h2>
+
+<ol>
+    <li>Crear las consultas SQL</li>
+    <li>Crear las correspondientes vistas</li>
+    <li>Crear las tablas en nuestro DataWarehouse</li>
+    <li>Migrar los datos de las vistas al DataWarehouse</li>
+    <li>Se tendra una tabla de hechos y siete tablas de dimensiones</li>
+</ol>
 <p><img src="./img/Conexion_BD.png" alt=""></p>
