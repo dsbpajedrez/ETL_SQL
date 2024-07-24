@@ -3,4 +3,6 @@
 AdventureWorks de microsoft, la cual consta de una tienda ficticia de ventad e bicicletas a nivel
 internacional. 
 
-Para esto es importante tener instalado SQL Sever y la base de datos antes mencionada.</p>
+Para esto es importante tener instalado SQL Sever y la base de datos antes mencionada.
+<img src="https://tse3.mm.bing.net/th?id=OIP.CnBT82zhVgjR896VGs_mwAHaFj&pid=Api&P=0&h=180" alt="">
+</p>
