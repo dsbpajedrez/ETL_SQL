@@ -1,9 +1,13 @@
-<h1>DataWarehouse con SQL server </h1>
-<p> En este repo te muestro como he desarrollado un almacen de datos a partir de la base de datos
-AdventureWorks de microsoft, la cual consta de una tienda ficticia de ventad e bicicletas a nivel
+<h1>DataWarehouse con SQL server</h1>
+<p> En este repo se ilustra el desarrollado un almacen de datos a partir de la base de datos
+AdventureWorks de microsoft, la cual consta de una tienda ficticia de venta de bicicletas a nivel
 internacional. 
 
-Para esto es importante tener instalado SQL Sever y la base de datos antes mencionada.
+Para esto es importante conocer las herramientas necesarias:
+## Herramientas y Tecnologías
+- SQL Server
+- AdventureWorks Database
+- SQL
 </p>
 <h2>Pasos a seguir:</h2>
 
