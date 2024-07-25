@@ -1,26 +1,38 @@
 <h1>DataWarehouse con SQL server</h1>
-<p> En este repo se ilustra el desarrollado un almacen de datos a partir de la base de datos
+<p> En este repo se ilustra el desarrollo de un almacen de datos a partir de la base de datos
 AdventureWorks de microsoft, la cual consta de una tienda ficticia de venta de bicicletas a nivel
 internacional. 
 
-Para esto es importante conocer las herramientas necesarias:
-## Herramientas y Tecnologías
+## Herramientas y Tecnologías 
 - SQL Server
 - AdventureWorks Database
-- SQL
-</p>
-<h2>Pasos a seguir:</h2>
 
-<ol>
-    <li>Crear las consultas SQL</li>
-    <li>Crear las correspondientes vistas</li>
-    <li>Crear las tablas en nuestro DataWarehouse</li>
-    <li>Migrar los datos de las vistas al DataWarehouse</li>
-    <li>Se tendra una tabla de hechos y siete tablas de dimensiones</li>
-</ol>
-<p>A continuación se muestra el modelo estrella como resultado de la transformación</p>
-<img src="./img/Modelo_Estrella.png" alt=""><br>
-Como se puede observar , nuestra tabla de hechos es nuestra tabla de ventas. En ella se han combinado las tablas
-Sales <b>Sales.SalesOrderHeader</b> y <b>Sales.SalesOrderDetail</b>, que son las que contienen la información 
-de las facturas a los clientes. En esta se agregan los campos de interés y se realizan las transformaciones 
-pertinentes para una interpretación más eficiente y rápida.
+
+## Estructura del Proyecto
+  - `ETL_AdventureWorks.sql`: Contenido de los scripts para el ETL.
+
+## Tabla de Hechos de Ventas:
+
+Descripción: Esta tabla contiene los datos de las transacciones de ventas realizadas. Cada registro en la tabla representa una venta individual.
+Contenido: Incluye métricas clave como la cantidad vendida, el precio unitario, el total de ventas, estado de los pedidos y otros indicadores financieros relevantes.
+## Dimensiones:
+
+## Clientes (Individuos y Tiendas):
+- Descripción: Esta dimensión categoriza los clientes en dos tipos: individuos y tiendas. Proporciona detalles específicos sobre cada tipo de cliente.
+- Contenido: Incluye información como el nombre del cliente, genéro, ubicación, y otros datos demográficos y de contacto relevantes.
+## Territorio:
+- Descripción: Esta dimensión identifica el territorio geográfico donde se realizó la venta.
+- Contenido: Incluye información sobre el país, región, ciudad, etc.
+## Método de Envío:
+- Descripción: Esta dimensión describe los diferentes métodos de envío utilizados para entregar los productos a los clientes.
+- Contenido: Incluye detalles sobre el método de envío, y costos asociados.
+## Fecha:
+- Descripción: Esta dimensión proporciona una estructura temporal para analizar las ventas a lo largo del tiempo.
+- Contenido: Incluye datos como la fecha de la venta, día de la semana, mes, trimestre, año, y otros marcadores temporales.
+## Cambio de Moneda:
+- Descripción: Esta dimensión permite la conversión y análisis de las ventas en diferentes monedas, según el país en el que se realizó la venta.
+- Contenido: Incluye la moneda utilizada, la tasa de cambio en el momento de la venta.
+## Producto:
+- Descripción: Esta dimensión proporciona detalles sobre los productos vendidos.
+- Contenido: Incluye información como el nombre del producto, categoría, subcategoría, fabricante, y otras características del producto.
+
