@@ -9,15 +9,8 @@ Para esto es importante conocer las herramientas necesarias:
 - AdventureWorks Database
 - SQL
 </p>
-<h2>Pasos a seguir:</h2>
-
-<ol>
-    <li>Crear las consultas SQL</li>
-    <li>Crear las correspondientes vistas</li>
-    <li>Crear las tablas en nuestro DataWarehouse</li>
-    <li>Migrar los datos de las vistas al DataWarehouse</li>
-    <li>Se tendra una tabla de hechos y siete tablas de dimensiones</li>
-</ol>
+## Estructura del Proyecto
+  - `ETL_AdventureWorks.sql`: Contenido de los scripts para el ETL.
 <p>A continuación se muestra el modelo estrella como resultado de la transformación</p>
 <img src="./img/Modelo_Estrella.png" alt=""><br>
 Como se puede observar , nuestra tabla de hechos es nuestra tabla de ventas. En ella se han combinado las tablas
