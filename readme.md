@@ -6,7 +6,7 @@ internacional.
 ## Herramientas y Tecnologías 
 - SQL Server
 - AdventureWorks Database
-- SQL
+
 
 ## Estructura del Proyecto
   - `ETL_AdventureWorks.sql`: Contenido de los scripts para el ETL.
